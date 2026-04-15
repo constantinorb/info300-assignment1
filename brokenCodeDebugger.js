@@ -1,16 +1,16 @@
-// Name: Reed
+// Name: Reed 
 // Program #4: Broken Code Debugger
 
 const readlineSync = require('readline-sync');
 
-let start = parseInt(readlineSync.question("Enter start number: ")); // Fixed: convert input to number
-let end = parseInt(readlineSync.question("Enter end number: ")); // Fixed: convert input to number
+let start = parseInt(readlineSync.question("Enter start number: ")); // Fixed: used parseInt so the input is treated like a number
+let end = parseInt(readlineSync.question("Enter end number: ")); // Fixed: used parseInt so the input is treated like a number
 
 let count = 0;
 
 for (let i = start; i <= end; i++) {
-    if (i % 2 == 0) { // Fixed: use modulus to check even numbers
-        count += 1; // Fixed: += instead of =+
+    if (i % 2 == 0) { // Fixed: changed i / 2 == 0 to i % 2 == 0 to correctly check if a number is even
+        count += 1; // Fixed: changed =+ to += so count increases by 1 each time
     }
 }
 
